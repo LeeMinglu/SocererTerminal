@@ -1,5 +1,5 @@
 //
-//  MLMainTabBarController.h
+//  MLBottomTabBarBtn.h
 //  SocererTerminal
 //
 //  Created by 李明禄 on 15/11/23.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MLBottomTabBar.h"
 
-@interface MLMainTabBarController : UITabBarController <MLBottomTabBarDelegate>
+@interface MLBottomTabBarBtn : UIButton
 
 @end

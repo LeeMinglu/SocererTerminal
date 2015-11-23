@@ -34,14 +34,18 @@
     adImageView.centerY = self.view.height * 0.4;
     [self.view addSubview:adImageView];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+    //2秒钟后进入MainTabBar控制器
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
         MLMainTabBarController *mainTabBarVc = [[MLMainTabBarController alloc] init];
         window.rootViewController = mainTabBarVc;
-        
+   
+    
     });
+    
     
 
 }
