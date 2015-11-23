@@ -16,30 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="50p-wG-LlE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-BL-eS4">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad" translatesAutoresizingMaskIntoConstraints="NO" id="zhE-yw-5pO">
-                                <rect key="frame" x="178" y="174" width="244" height="252"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="252" id="mFm-ou-ZP4"/>
-                                    <constraint firstAttribute="width" constant="244" id="y3s-3A-4v0"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ztw-BL-eS4" firstAttribute="leading" secondItem="50p-wG-LlE" secondAttribute="leading" id="3ID-ff-fd7"/>
-                            <constraint firstItem="zhE-yw-5pO" firstAttribute="centerY" secondItem="50p-wG-LlE" secondAttribute="centerY" id="ETA-Rz-qwN"/>
-                            <constraint firstItem="Ztw-BL-eS4" firstAttribute="top" secondItem="lxB-oT-QhB" secondAttribute="bottom" id="Eyz-R9-Lqb"/>
-                            <constraint firstItem="wcc-d3-eVy" firstAttribute="top" secondItem="Ztw-BL-eS4" secondAttribute="bottom" id="Oia-QM-E5q"/>
-                            <constraint firstItem="zhE-yw-5pO" firstAttribute="centerX" secondItem="50p-wG-LlE" secondAttribute="centerX" id="Uid-eL-jH0"/>
-                            <constraint firstAttribute="trailing" secondItem="Ztw-BL-eS4" secondAttribute="trailing" id="hcd-rg-blD"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xs-xc-zGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -47,8 +25,4 @@
             <point key="canvasLocation" x="318" y="249"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LaunchImage" width="320" height="480"/>
-        <image name="ad" width="306" height="310"/>
-    </resources>
 </document>

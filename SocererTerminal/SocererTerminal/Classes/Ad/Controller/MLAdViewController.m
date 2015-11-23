@@ -7,6 +7,7 @@
 //
 
 #import "MLAdViewController.h"
+#import "MLMainTabBarController.h"
 
 @interface MLAdViewController ()
 
@@ -16,7 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //1.设置背景图片
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+    
+    [self.view addSubview:backgroundImageView];
+    backgroundImageView.frame = self.view.bounds;
+    
+    
+    //2.添加广告图片
+    UIImageView *adImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ad"]];
+    adImageView.width = 306;
+    adImageView.height = 310;
+    adImageView.centerX = self.view.width * 0.5;
+    adImageView.centerY = self.view.height * 0.4;
+    [self.view addSubview:adImageView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        
+        MLMainTabBarController *mainTabBarVc = [[MLMainTabBarController alloc] init];
+        window.rootViewController = mainTabBarVc;
+        
+    });
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
