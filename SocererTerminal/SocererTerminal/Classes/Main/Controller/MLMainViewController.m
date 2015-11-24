@@ -65,17 +65,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //添加子控制器
+    //1.添加子控制器
     [self setupChildsVces];
     
-    //为scrollview添加属性
+    //2.为scrollview添加属性
     [self setupTitles];
     
-    //设置scrollView属性
+    //3.设置scrollView属性
     [self setupScrollViewProperties];
     
-    //添加默认控制器
+    //4.添加默认控制器
     [self addDefaultChildController];
+    
+    //5.设置label默认的比例值
+    MLHomeLabel *firstLabel = [self.titleScrollView.subviews firstObject];
+    firstLabel.scale = 1.0;
     
 }
 
