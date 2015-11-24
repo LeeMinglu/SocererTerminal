@@ -43,11 +43,7 @@
         MLMainTabBarController *mainTabBarVc = [[MLMainTabBarController alloc] init];
         window.rootViewController = mainTabBarVc;
    
-    
     });
-    
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

@@ -53,6 +53,9 @@
 		1AF7708B1C03158C00D2DB8F /* MLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7708A1C03158C00D2DB8F /* MLMainTabBarController.m */; };
 		1AF7708E1C0317A700D2DB8F /* MLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7708D1C0317A700D2DB8F /* MLMainViewController.m */; };
 		1AF770931C03186700D2DB8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF770921C03186700D2DB8F /* Main.storyboard */; };
+		1AF912481C0423D6003D8BB4 /* MLChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF912471C0423D6003D8BB4 /* MLChannel.m */; };
+		1AF9124A1C042421003D8BB4 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AF912491C042421003D8BB4 /* topic_news.json */; };
+		1AF9124D1C04274F003D8BB4 /* MLHomeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9124C1C04274F003D8BB4 /* MLHomeLabel.m */; };
 		1AFD3F771C0322C000129296 /* MLReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3F761C0322C000129296 /* MLReadingViewController.m */; };
 		1AFD3F791C0322DF00129296 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD3F781C0322DF00129296 /* Reading.storyboard */; };
 		1AFD3F7C1C03234E00129296 /* MLDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3F7B1C03234E00129296 /* MLDiscoverViewController.m */; };
@@ -156,6 +159,11 @@
 		1AF7708C1C0317A700D2DB8F /* MLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMainViewController.h; sourceTree = "<group>"; };
 		1AF7708D1C0317A700D2DB8F /* MLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMainViewController.m; sourceTree = "<group>"; };
 		1AF770921C03186700D2DB8F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1AF912461C0423D6003D8BB4 /* MLChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLChannel.h; sourceTree = "<group>"; };
+		1AF912471C0423D6003D8BB4 /* MLChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLChannel.m; sourceTree = "<group>"; };
+		1AF912491C042421003D8BB4 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		1AF9124B1C04274F003D8BB4 /* MLHomeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHomeLabel.h; sourceTree = "<group>"; };
+		1AF9124C1C04274F003D8BB4 /* MLHomeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHomeLabel.m; sourceTree = "<group>"; };
 		1AFD3F751C0322C000129296 /* MLReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLReadingViewController.h; sourceTree = "<group>"; };
 		1AFD3F761C0322C000129296 /* MLReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLReadingViewController.m; sourceTree = "<group>"; };
 		1AFD3F781C0322DF00129296 /* Reading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reading.storyboard; sourceTree = "<group>"; };
@@ -233,7 +241,7 @@
 				1AF76FD91C02CCE900D2DB8F /* HeadLine */,
 				1AF76FDD1C02CCE900D2DB8F /* LeftMenu */,
 				1AF76FE51C02CCE900D2DB8F /* MainTabBar-自定义TabBar控制器 */,
-				1AF76FE11C02CCE900D2DB8F /* Main */,
+				1AF76FE11C02CCE900D2DB8F /* Main-头条 */,
 				1AF76FF71C02CCE900D2DB8F /* Reading */,
 				1AF76FD51C02CCE900D2DB8F /* Discover */,
 				1AF770031C02CCE900D2DB8F /* Video */,
@@ -409,13 +417,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF76FE11C02CCE900D2DB8F /* Main */ = {
+		1AF76FE11C02CCE900D2DB8F /* Main-头条 */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FE31C02CCE900D2DB8F /* Model */,
 				1AF76FE41C02CCE900D2DB8F /* View */,
 				1AF76FE21C02CCE900D2DB8F /* Controller */,
 			);
+			name = "Main-头条";
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -431,6 +440,9 @@
 		1AF76FE31C02CCE900D2DB8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AF912461C0423D6003D8BB4 /* MLChannel.h */,
+				1AF912471C0423D6003D8BB4 /* MLChannel.m */,
+				1AF912491C042421003D8BB4 /* topic_news.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +451,8 @@
 			isa = PBXGroup;
 			children = (
 				1AF770921C03186700D2DB8F /* Main.storyboard */,
+				1AF9124B1C04274F003D8BB4 /* MLHomeLabel.h */,
+				1AF9124C1C04274F003D8BB4 /* MLHomeLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -895,6 +909,7 @@
 				1AFD3F791C0322DF00129296 /* Reading.storyboard in Resources */,
 				1AF7700B1C02CE6500D2DB8F /* Ad.storyboard in Resources */,
 				1AF770171C02D37200D2DB8F /* MBProgressHUD.bundle in Resources */,
+				1AF9124A1C042421003D8BB4 /* topic_news.json in Resources */,
 				1AFD3F831C03243900129296 /* Video.storyboard in Resources */,
 				1AF76FC21C02C9ED00D2DB8F /* Assets.xcassets in Resources */,
 				1AF76FC01C02C9ED00D2DB8F /* Main.storyboard in Resources */,
@@ -920,6 +935,7 @@
 				1AF770881C02E96700D2DB8F /* UIView+MLExtension.m in Sources */,
 				1AF7706D1C02D39200D2DB8F /* UIImageView+HighlightedWebCache.m in Sources */,
 				1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */,
+				1AF912481C0423D6003D8BB4 /* MLChannel.m in Sources */,
 				1AF770641C02D39200D2DB8F /* SDWebImageDecoder.m in Sources */,
 				1AF7708E1C0317A700D2DB8F /* MLMainViewController.m in Sources */,
 				1AF770611C02D39200D2DB8F /* NSData+ImageContentType.m in Sources */,
@@ -951,6 +967,7 @@
 				1AF7708B1C03158C00D2DB8F /* MLMainTabBarController.m in Sources */,
 				1AFD3F9A1C03359400129296 /* MLBottomTabBar.m in Sources */,
 				1AF770191C02D37200D2DB8F /* NSString+HMExtension.m in Sources */,
+				1AF9124D1C04274F003D8BB4 /* MLHomeLabel.m in Sources */,
 				1AF770631C02D39200D2DB8F /* SDWebImageCompat.m in Sources */,
 				1AF76FB71C02C9EC00D2DB8F /* main.m in Sources */,
 				1AF7701B1C02D37200D2DB8F /* UIImage+HMExtension.m in Sources */,

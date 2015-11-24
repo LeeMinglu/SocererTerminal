@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nyi-t6-alv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--头条-->
@@ -32,10 +33,36 @@
                     <view key="view" contentMode="scaleToFill" id="qsd-br-ULJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oS7-mF-RH4" userLabel="titleScrollView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Twj-fc-Ulq"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRo-Dn-rB2" userLabel="ContentScrollView">
+                                <rect key="frame" x="20" y="94" width="580" height="506"/>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oS7-mF-RH4" firstAttribute="top" secondItem="7LB-AE-YJi" secondAttribute="bottom" id="5Xx-M2-AAc"/>
+                            <constraint firstItem="yRo-Dn-rB2" firstAttribute="leading" secondItem="qsd-br-ULJ" secondAttribute="leadingMargin" id="BSF-lL-zD8"/>
+                            <constraint firstItem="oS7-mF-RH4" firstAttribute="leading" secondItem="qsd-br-ULJ" secondAttribute="leading" id="EI3-DS-RT5"/>
+                            <constraint firstAttribute="trailing" secondItem="oS7-mF-RH4" secondAttribute="trailing" id="WgT-YD-KFt"/>
+                            <constraint firstItem="mnr-QI-V1e" firstAttribute="top" secondItem="yRo-Dn-rB2" secondAttribute="bottom" id="a8N-fb-oc4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yRo-Dn-rB2" secondAttribute="trailing" constant="-20" id="wHp-uX-mSS"/>
+                            <constraint firstItem="yRo-Dn-rB2" firstAttribute="top" secondItem="oS7-mF-RH4" secondAttribute="bottom" id="x4S-Zr-bPa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="头条" id="xwL-gr-UYD"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="yRo-Dn-rB2" id="fex-zM-J6k"/>
+                        <outlet property="titleScrollView" destination="oS7-mF-RH4" id="rL2-Ph-Kyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVW-tw-N0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
