@@ -65,16 +65,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSLog(@"%@", self.channelList);
-    
+    //添加子控制器
     [self setupChildsVces];
     
-    
+    //为scrollview添加属性
     [self setupTitles];
     
-    //设置titile
+    //设置scrollView属性
     [self setupScrollViewProperties];
     
+    //添加默认控制器
+    [self addDefaultChildController];
+    
+}
+
+/**
+ *  默认显示的子控制器
+ */
+- (void)addDefaultChildController {
+    UIViewController *firstVc = self.childViewControllers.firstObject;
+    
+    [self addChildViewController:firstVc];
+    firstVc.view.frame = self.contentScrollView.bounds;
+    [self.contentScrollView addSubview:firstVc.view];
 }
 
 - (void)setupScrollViewProperties {
