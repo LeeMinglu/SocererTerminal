@@ -8,6 +8,9 @@
 
 #import "MLMainViewController.h"
 #import "MLChannel.h"
+#import "MLHeadLineViewController.h"
+#import "MLSocietyViewController.h"
+#import "MLHomeLabel.h"
 
 @interface MLMainViewController ()
 
@@ -62,7 +65,97 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@", self.channelList);
+//    NSLog(@"%@", self.channelList);
+    
+    [self setupChildsVces];
+    
+    
+    [self setupTitles];
+    
+}
+
+- (void)setupChildsVces {
+    //1.新闻控制器
+    UIStoryboard *headLineStoryBoard = [UIStoryboard storyboardWithName:@"HeadLine" bundle:nil];
+    
+    MLHeadLineViewController *headLineVc = [headLineStoryBoard instantiateViewControllerWithIdentifier:@"HeadLine"];
+    
+    //传递url字符串---> 用来发送请求
+    headLineVc.urlString = [self.channelList[0] tid];
+    
+    //传递标题名称 -> 用来显示在Label标签上
+    headLineVc.title = [self.channelList[0] tname];
+    
+    [self addChildViewController:headLineVc];
+    
+    
+    //2.社会控制器
+    UIStoryboard *societyStoryBoard = [UIStoryboard storyboardWithName:@"Society" bundle:nil];
+    MLSocietyViewController *societyVc = [societyStoryBoard instantiateViewControllerWithIdentifier:@"Society"];
+    
+    societyVc.urlString = [self.channelList[1] tid];
+    societyVc.title = [self.channelList[1] tname];
+    
+    [self addChildViewController:societyVc];
+    
+    
+    //3.循环创建多个控制器
+    
+    int count = (int)self.channelList.count - 2;
+    
+    for (int i = 0; i < count; i++) {
+        UIViewController *vc = [[UIViewController alloc] init];
+        vc.title = [self.channelList[i + 2]  tname];
+        [self addChildViewController:vc];
+//        NSLog(@"lllllllll:%@", [self.channelList[i] tname]);
+    }
+
+}
+
+- (void)setupTitles {
+    
+    NSUInteger count = self.childViewControllers.count;
+    CGFloat labelW = 80;
+    CGFloat labelH = 30;
+    CGFloat labelY = 0;
+    
+    for (NSUInteger i = 0 ; i < count; i++) {
+        //创建label
+        MLHomeLabel *label = [[MLHomeLabel alloc] init];
+        label.tag = i;
+        [self.titleScrollView addSubview:label];
+        
+        //设置Frame
+        CGFloat labelX = i * labelW;
+        label.frame = CGRectMake(labelX, labelY, labelW, labelH);
+        
+        //设置文字
+        UIViewController *vc = self.childViewControllers[i];
+        label.text = vc.title;
+        
+        //监听点击
+        [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
+        
+        //设置scrollView内容的大小
+        CGFloat titleContentW = count * labelW;
+        self.titleScrollView.contentSize = CGSizeMake(titleContentW, 0);
+        
+        
+    }
+    
+}
+
+//监听label的点击
+- (void)labelClick:(UIGestureRecognizer *)recognizer {
+    //1.获得被点击的label
+    MLHomeLabel *label = (MLHomeLabel *)recognizer.view;
+    
+    //2.计算x方向上的偏移量
+    CGFloat offsetX = label.tag * self.contentScrollView.frame.size.width;
+    
+    //3.设置偏移量
+    [self.titleScrollView setContentOffset:CGPointMake(offsetX, 0)];
+    
 }
 
 

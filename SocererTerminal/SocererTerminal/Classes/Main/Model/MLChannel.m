@@ -12,7 +12,9 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        [self setValuesForKeysWithDictionary:dict];
+//        [self setValuesForKeysWithDictionary:dict];
+        self.tname = dict[@"tname"];
+        self.tid = dict[@"tid"];
     }
     return self;
 }
@@ -21,6 +23,6 @@
     return [[self alloc] initWithDictionary:dict];
 }
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {}
+//- (void)setValue:(id)value forUndefinedKey:(NrSString *)key {}
 
 @end
