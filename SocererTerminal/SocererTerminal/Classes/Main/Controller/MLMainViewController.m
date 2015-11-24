@@ -11,6 +11,7 @@
 #import "MLHeadLineViewController.h"
 #import "MLSocietyViewController.h"
 #import "MLHomeLabel.h"
+#import "MLLeftDockMenu.h"
 
 @interface MLMainViewController ()<UIScrollViewDelegate>
 
@@ -28,6 +29,9 @@
  *  存放所有内容的ScrollView
  */
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+
+/**  左边菜单视图*/
+@property (nonatomic, weak) MLLeftDockMenu *leftDockMenu;
 
 @end
 
@@ -81,6 +85,47 @@
     MLHomeLabel *firstLabel = [self.titleScrollView.subviews firstObject];
     firstLabel.scale = 1.0;
     
+    //6. 设置导航栏左边的item
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sidebar_nav_news"] style:UIBarButtonItemStylePlain target:self action:@selector(navLeftItemClick)];
+    
+}
+
+#pragma mark - 导航栏左边item点击事件
+
+- (void)navLeftItemClick {
+   //1.如果左边的菜单视图已经存在,表示用户不是第一次点击就需要判断展开还是合闭;
+    if (self.leftDockMenu) {
+        //左边视图为展开状态
+        if (self.contentScrollView.contentOffset.x < 0) { //需要闭合
+            [self.contentScrollView setContentOffset:CGPointZero animated:YES];
+        }else { //需要展开
+            //让内容滚动视图向右偏移200的间距,特别注意一旦滚动视图被点击或触摸就会执行scrollViewDidScroll: 方法, 恢复原来状态
+            [self.contentScrollView setContentOffset:CGPointMake(-200, 0) animated: YES];
+            
+        }
+    }else {// 2.如果左边的菜单视图不存在,表示用户是第一次点击,那么就创建左边的菜单视图
+        [self setupLeftDockMenu];
+        
+        [self.contentScrollView setContentOffset:CGPointMake(-200, 0) animated:YES];
+        
+    }
+}
+
+- (void)setupLeftDockMenu {
+    //1.创建左边的菜单视图
+    MLLeftDockMenu *leftDockMenu = [[MLLeftDockMenu alloc] init];
+    
+    leftDockMenu.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    leftDockMenu.height = 300;
+    leftDockMenu.width = 150;
+    leftDockMenu.y = (self.contentScrollView.height - leftDockMenu.height) * 0.5;
+    leftDockMenu.x = -200;
+    
+    //2.添加到滚动视图中
+    [self.contentScrollView addSubview:leftDockMenu];
+    
+    //3.记录左边的菜单视图
+    self.leftDockMenu = leftDockMenu;
 }
 
 /**
