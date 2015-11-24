@@ -12,7 +12,7 @@
 #import "MLSocietyViewController.h"
 #import "MLHomeLabel.h"
 
-@interface MLMainViewController ()
+@interface MLMainViewController ()<UIScrollViewDelegate>
 
 /**
  *  存放频道清单的数组
@@ -71,6 +71,34 @@
     
     
     [self setupTitles];
+    
+    //设置titile
+    [self setupScrollViewProperties];
+    
+}
+
+- (void)setupScrollViewProperties {
+    
+    self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    self.titleScrollView.showsVerticalScrollIndicator = NO;
+    self.contentScrollView.showsVerticalScrollIndicator = NO;
+    self.contentScrollView.showsHorizontalScrollIndicator = NO;
+    
+    //2.设置scrollview的代理方法
+    self.contentScrollView.delegate = self;
+    
+    //3.设置分页效果
+    self.contentScrollView.pagingEnabled = YES;
+    
+    //4.设置内容滚动视图的size
+    CGFloat contentW = self.childViewControllers.count * [UIScreen mainScreen].bounds.size.width;
+    self.contentScrollView.contentSize = CGSizeMake(contentW, 0);
+    
+    //5.取消scrollView自动调整内边距的属性值
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
+
     
 }
 
@@ -150,11 +178,12 @@
     //1.获得被点击的label
     MLHomeLabel *label = (MLHomeLabel *)recognizer.view;
     
+    NSLog(@"点击了%@",label.text);
     //2.计算x方向上的偏移量
     CGFloat offsetX = label.tag * self.contentScrollView.frame.size.width;
     
     //3.设置偏移量
-    [self.titleScrollView setContentOffset:CGPointMake(offsetX, 0)];
+    [self.contentScrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
 }
 
