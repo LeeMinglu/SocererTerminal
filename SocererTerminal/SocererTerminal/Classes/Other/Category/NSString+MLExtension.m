@@ -1,15 +1,14 @@
 //
-//  NSString+HMExtension.m
-//  20-QQ聊天
+//  NSString+MLExtension.m
+//  SocererTerminal
 //
-//  Created by 谢聪捷 on 15/7/13.
-//  Copyright (c) 2015年 Jack-Xie. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
-#import "NSString+HMExtension.h"
+#import "NSString+MLExtension.h"
 
-@implementation NSString (HMExtension)
-
+@implementation NSString (MLExtension)
 + (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize
 {
     NSDictionary *attrs = @{NSFontAttributeName : font};

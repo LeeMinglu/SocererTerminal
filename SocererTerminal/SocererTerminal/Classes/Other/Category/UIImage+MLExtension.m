@@ -1,15 +1,14 @@
 //
-//  UIImage+HMExtension.m
-//  高仿网易新闻案例
+//  UIImage+MLExtension.m
+//  SocererTerminal
 //
-//  Created by apple on 15/11/18.
-//  Copyright © 2015年 itheima. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
-#import "UIImage+HMExtension.h"
+#import "UIImage+MLExtension.h"
 
-@implementation UIImage (HMExtension)
-
+@implementation UIImage (MLExtension)
 + (UIImage *)imageWithColor:(UIColor *)color
 {
     CGFloat imageW = 100;

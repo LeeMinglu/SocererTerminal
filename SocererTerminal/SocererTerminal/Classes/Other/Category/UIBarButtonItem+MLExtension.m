@@ -1,15 +1,14 @@
 //
-//  UIBarButtonItem+HMExtension.m
-//  高仿网易新闻
+//  UIBarButtonItem+MLExtension.m
+//  SocererTerminal
 //
-//  Created by apple on 15/11/15.
-//  Copyright © 2015年 itheima. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
-#import "UIBarButtonItem+HMExtension.h"
+#import "UIBarButtonItem+MLExtension.h"
 
-@implementation UIBarButtonItem (HMExtension)
-
+@implementation UIBarButtonItem (MLExtension)
 + (instancetype)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action
 {
     // 创建按钮

@@ -1,15 +1,14 @@
 //
-//  MBProgressHUD+HMExtension.m
-//  美团HD
+//  MBProgressHUD+MLExtension.m
+//  SocererTerminal
 //
-//  Created by apple on 15/7/24.
-//  Copyright (c) 2015年 itheima. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
-#import "MBProgressHUD+HMExtension.h"
+#import "MBProgressHUD+MLExtension.h"
 
-@implementation MBProgressHUD (HMExtension)
-
+@implementation MBProgressHUD (MLExtension)
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {

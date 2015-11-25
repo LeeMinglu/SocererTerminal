@@ -1,15 +1,14 @@
 //
-//  UIBarButtonItem+HMExtension.h
-//  高仿网易新闻
+//  UIBarButtonItem+MLExtension.h
+//  SocererTerminal
 //
-//  Created by apple on 15/11/15.
-//  Copyright © 2015年 itheima. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIBarButtonItem (HMExtension)
-
+@interface UIBarButtonItem (MLExtension)
 /**
  *  创建一个拥有2张图片的item对象
  *
@@ -21,5 +20,6 @@
  *  @return 返回创建好的item对象
  */
 + (instancetype)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action;
+
 
 @end

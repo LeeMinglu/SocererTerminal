@@ -1,24 +1,25 @@
 //
-//  HMStatusBarHUD.m
-//  新闻详情
+//  MLStatusBarHUD.m
+//  SocererTerminal
 //
-//  Created by apple on 20/6/20.
-//  Copyright (c) 2020年 itheima. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
-#import "HMStatusBarHUD.h"
+#import "MLStatusBarHUD.h"
 
 static UIWindow *_window;
 // 窗口的高度
-static const CGFloat HMWindowHeight = 20;
+static const CGFloat MLWindowHeight = 20;
 // 动画的执行时间
-static const CGFloat HMDuration = 0.5;
+static const CGFloat MLDuration = 0.5;
 // 窗口的停留时间
-static const CGFloat HMDelay = 1.5;
+static const CGFloat MLDelay = 1.5;
 // 字体大小
-#define HMFont [UIFont systemFontOfSize:12]
+#define MLFont [UIFont systemFontOfSize:12]
 
-@implementation HMStatusBarHUD
+
+@implementation MLStatusBarHUD
 
 
 /**
@@ -36,7 +37,7 @@ static const CGFloat HMDelay = 1.5;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     // 设置按钮文字大小
-    btn.titleLabel.font = HMFont;
+    btn.titleLabel.font = MLFont;
     
     // 切掉文字左边的 10
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
@@ -50,7 +51,7 @@ static const CGFloat HMDelay = 1.5;
     // 窗口背景
     _window.backgroundColor = [UIColor blackColor];
     _window.windowLevel = UIWindowLevelAlert;
-    _window.frame = CGRectMake(0, -HMWindowHeight, [UIScreen mainScreen].bounds.size.width, HMWindowHeight);
+    _window.frame = CGRectMake(0, -MLWindowHeight, [UIScreen mainScreen].bounds.size.width, MLWindowHeight);
     btn.frame = _window.bounds;
     [_window addSubview:btn];
     _window.hidden = NO;
@@ -59,14 +60,14 @@ static const CGFloat HMDelay = 1.5;
     // UIWindowLevelAlert > UIWindowLevelStatusBar > UIWindowLevelNormal
     
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:MLDuration animations:^{
         CGRect frame = _window.frame;
         frame.origin.y = 0;
         _window.frame = frame;
     }completion:^(BOOL finished) {
-        [UIView animateWithDuration:HMDuration delay:HMDelay options:kNilOptions animations:^{
+        [UIView animateWithDuration:MLDuration delay:MLDelay options:kNilOptions animations:^{
             CGRect frame = _window.frame;
-            frame.origin.y = -HMWindowHeight;
+            frame.origin.y = -MLWindowHeight;
             _window.frame = frame;
         } completion:^(BOOL finished) {
             _window = nil;
@@ -90,7 +91,7 @@ static const CGFloat HMDelay = 1.5;
  */
 + (void)showSuccess:(NSString *)msg
 {
-    [self showMessage:msg imageName:@"HMStatusBarHUD.bundle/success"];
+    [self showMessage:msg imageName:@"MLStatusBarHUD.bundle/success"];
 }
 
 /**
@@ -100,7 +101,7 @@ static const CGFloat HMDelay = 1.5;
  */
 + (void)showError:(NSString *)msg
 {
-    [self showMessage:msg imageName:@"HMStatusBarHUD.bundle/error"];
+    [self showMessage:msg imageName:@"MLStatusBarHUD.bundle/error"];
 }
 
 /**
@@ -109,9 +110,9 @@ static const CGFloat HMDelay = 1.5;
 + (void)hideLoading
 {
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:MLDuration animations:^{
         CGRect frame = _window.frame;
-        frame.origin.y = -HMWindowHeight;
+        frame.origin.y = -MLWindowHeight;
         _window.frame = frame;
     }completion:^(BOOL finished) {
         _window = nil;
@@ -133,13 +134,13 @@ static const CGFloat HMDelay = 1.5;
     // 窗口背景
     _window.backgroundColor = [UIColor blackColor];
     _window.windowLevel = UIWindowLevelAlert;
-    _window.frame = CGRectMake(0, -HMWindowHeight, [UIScreen mainScreen].bounds.size.width, HMWindowHeight);
+    _window.frame = CGRectMake(0, -MLWindowHeight, [UIScreen mainScreen].bounds.size.width, MLWindowHeight);
     _window.hidden = NO;
     
     // 文字
     UILabel *label = [[UILabel alloc] init];
     label.frame = _window.bounds;
-    label.font = HMFont;
+    label.font = MLFont;
     label.text = msg;
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
@@ -148,11 +149,11 @@ static const CGFloat HMDelay = 1.5;
     // 圈圈
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [indicatorView startAnimating];
-    indicatorView.frame = CGRectMake(0, 0, HMWindowHeight, HMWindowHeight);
+    indicatorView.frame = CGRectMake(0, 0, MLWindowHeight, MLWindowHeight);
     [_window addSubview:indicatorView];
     
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:MLDuration animations:^{
         CGRect frame = _window.frame;
         frame.origin.y = 0;
         _window.frame = frame;

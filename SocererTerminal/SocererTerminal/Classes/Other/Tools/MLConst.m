@@ -8,4 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-
+// 网易新闻域名
+NSString * const kNetEaseDomain = @"http://c.m.163.com/nc/article/headline/";

@@ -8,3 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
+/**网易新闻域名 */
+UIKIT_EXTERN NSString * const kNetEaseDomain;
+

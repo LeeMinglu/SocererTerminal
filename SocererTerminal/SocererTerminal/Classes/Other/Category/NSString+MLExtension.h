@@ -1,17 +1,18 @@
 //
-//  NSString+HMExtension.h
-//  20-QQ聊天
+//  NSString+MLExtension.h
+//  SocererTerminal
 //
-//  Created by 谢聪捷 on 15/7/13.
-//  Copyright (c) 2015年 Jack-Xie. All rights reserved.
+//  Created by 李明禄 on 15/11/25.
+//  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
 
-@interface NSString (HMExtension)
+#import <Foundation/Foundation.h>
 
+@interface NSString (MLExtension)
 /** 类方法 */
 + (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize;
 /** 对象方法 */
