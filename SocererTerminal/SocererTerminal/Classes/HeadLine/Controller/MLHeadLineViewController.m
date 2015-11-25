@@ -29,84 +29,73 @@
     domainURL = [NSString stringWithFormat:@"%@/0-140.html",domainURL];
     
     //向服务器发送请求
-    [[MLHTTPManager manager] GET:domainURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[MLHTTPManager manager] GET:domainURL parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         NSLog(@"%@", responseObject);
+        
+        //解析数据
+//        [responseObject writeToFile:@"/Users/luoriver/Desktop/news.plist" atomically:YES];
+        
+        NSArray *dictArray = responseObject[self.urlString];
+        
+        
+        NSMutableArray *modelArray = [NSMutableArray array];
+        
+        for (NSDictionary *dict in dictArray) {
+            MLHeadLine *headline = [MLHeadLine headlineWithDictionary:dict];
+            
+            [modelArray addObject:headline];
+        }
+        
+        self.headlines = [modelArray copy];
+        
+        //定义要刷新否则没有数据
+        [self.tableView reloadData];
+        
+        
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD showError:@"网络繁忙,请稍候再试!"];
         NSLog(@"错误:%@",error);
     }];
     
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
+#pragma mark - 实现数据源方法
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.headlines.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    MLHeadLine *headline = self.headlines[indexPath.row];
+    
+    NSString *ID = [MLHeadLineCell headlineCellWithIdentifier:headline];
+    
+    MLHeadLineCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    cell.headline = headline;
+    
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MLHeadLine *headline = self.headlines[indexPath.row];
+    if (headline.imgextra.count == 2) {
+        return 120;  // 120 -> @"ImagesCell"
+    }
+    
+    if (headline.isBigImage) {
+        return 180;  //// 180 -> @"BigImageCell"
+    }
+    
+    return 80; // 80 -> @"NewsCell"
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

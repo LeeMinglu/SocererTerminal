@@ -250,7 +250,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="5xK-w7-P3r">
             <objects>
-                <viewController id="i9j-SM-G3M" customClass="HMNewsDetailViewController" sceneMemberID="viewController">
+                <viewController id="i9j-SM-G3M" customClass="MLNewsDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ty-3p-Ojg"/>
                         <viewControllerLayoutGuide type="bottom" id="wgo-IQ-SxZ"/>

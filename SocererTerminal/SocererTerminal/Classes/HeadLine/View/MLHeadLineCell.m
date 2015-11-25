@@ -33,40 +33,38 @@
 
 @implementation MLHeadLineCell
 
-+ (NSString *)headlineCellWithIdentifier:(MLHeadLine *)headline {
-    
++ (NSString *)headlineCellWithIdentifier:(MLHeadLine *)headline
+{
     if (headline.imgextra.count == 2) {
-        return @"imagesCell";
+        return @"ImagesCell";
     }
     if (headline.isBigImage) {
         return @"BigImageCell";
     }
-    
     return @"NewsCell";
 }
 
-- (void)setHeadline:(MLHeadLine *)headline {
+
+- (void)setHeadline:(MLHeadLine *)headline
+{
     _headline = headline;
     
-    //1.为子控件设置数据
+    // 1. 为子控件设置数据
     self.titleLabel.text = headline.title;
-    self.detailTextLabel.text = headline.digest;
+    self.detailTitleLabel.text = headline.digest;
     self.replyLabel.text = [NSString stringWithFormat:@"%d跟帖",headline.replyCount];
-    
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:headline.imgsrc] placeholderImage:[UIImage imageNamed:@"loading"]];
     
-//    2.如果是三张图片的cell模板时,需要为其它两个图片框设置图片
+    // 2. 如果是三张图片的cell模板时,需要为其它两个图片框设置图片
     if (headline.imgextra.count == 2) {
-//        2.1设置第二张图片
         
+        // 2.1 设置第二张图片
         NSString *urlStringTwo = headline.imgextra[0][@"imgsrc"];
         [self.imageViewTwo sd_setImageWithURL:[NSURL URLWithString:urlStringTwo] placeholderImage:[UIImage imageNamed:@"loading"]];
         
-        
-        //2.2设置第三张图片
+        // 2.2 设置第三张图片
         NSString *urlStringThree = headline.imgextra[1][@"imgsrc"];
         [self.imageViewThree sd_setImageWithURL:[NSURL URLWithString:urlStringThree] placeholderImage:[UIImage imageNamed:@"loading"]];
-        
     }
 }
 
