@@ -5,17 +5,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Headline View Controller-->
+        <!--Head Line View Controller-->
         <scene sceneID="Pyn-n6-Ibk">
             <objects>
-                <tableViewController storyboardIdentifier="Headline" id="WpZ-dU-4Ny" customClass="HMHeadlineViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HeadLine" id="WpZ-dU-4Ny" customClass="MLHeadLineViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oth-gq-Y51">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="ylC-QE-4ch" customClass="HMHeadlineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="ylC-QE-4ch" customClass="MLHeadLineCell">
                                 <rect key="frame" x="0.0" y="28" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ylC-QE-4ch" id="hzt-C4-Vcl">
@@ -78,14 +78,14 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="detailTitleLabel" destination="dWB-l8-2sR" id="O1H-9p-TuO"/>
-                                    <outlet property="iconImageView" destination="NXH-bw-6ZG" id="G4v-w1-8Hp"/>
-                                    <outlet property="replyLabel" destination="fba-Xt-fvF" id="bD1-dP-kaP"/>
-                                    <outlet property="titleLabel" destination="6Fm-gw-3LI" id="zjl-TL-BYP"/>
+                                    <outlet property="detailTitleLabel" destination="dWB-l8-2sR" id="Lmd-t2-tTT"/>
+                                    <outlet property="iconImageView" destination="NXH-bw-6ZG" id="vzX-TG-YXW"/>
+                                    <outlet property="replyLabel" destination="fba-Xt-fvF" id="ZpD-nZ-ZHK"/>
+                                    <outlet property="titleLabel" destination="6Fm-gw-3LI" id="Qco-W8-bl9"/>
                                     <segue destination="i9j-SM-G3M" kind="show" id="3e3-6B-LVe"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="120" id="8WK-vd-VnG" customClass="HMHeadlineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="120" id="8WK-vd-VnG" customClass="MLHeadLineCell">
                                 <rect key="frame" x="0.0" y="108" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8WK-vd-VnG" id="tdW-jh-Hnw">
@@ -160,15 +160,15 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="iconImageView" destination="JRe-lV-0eo" id="bKr-eA-vRC"/>
-                                    <outlet property="imageViewThree" destination="RG9-D6-uZp" id="VxW-Oa-RxD"/>
-                                    <outlet property="imageViewTwo" destination="JvS-J0-WgI" id="ilc-4L-vbQ"/>
-                                    <outlet property="replyLabel" destination="gqY-nz-aba" id="65w-dg-6oO"/>
-                                    <outlet property="titleLabel" destination="keh-XO-lKP" id="VU9-be-lpJ"/>
-                                    <segue destination="i9j-SM-G3M" kind="show" id="cM0-kk-lvj"/>
+                                    <outlet property="iconImageView" destination="JRe-lV-0eo" id="YgL-W1-twM"/>
+                                    <outlet property="imageViewThree" destination="RG9-D6-uZp" id="dzp-f9-Bqx"/>
+                                    <outlet property="imageViewTwo" destination="JvS-J0-WgI" id="b2Y-QK-qIh"/>
+                                    <outlet property="replyLabel" destination="gqY-nz-aba" id="nnk-xK-FpA"/>
+                                    <outlet property="titleLabel" destination="keh-XO-lKP" id="5Li-zj-z5S"/>
+                                    <segue destination="i9j-SM-G3M" kind="show" id="hfR-l5-6gz"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImageCell" rowHeight="180" id="sXT-pY-KcN" customClass="HMHeadlineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImageCell" rowHeight="180" id="sXT-pY-KcN" customClass="MLHeadLineCell">
                                 <rect key="frame" x="0.0" y="228" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sXT-pY-KcN" id="Ueu-sw-XGJ">
@@ -228,10 +228,10 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="detailTitleLabel" destination="SOb-0T-Kgs" id="h6D-MA-HgR"/>
-                                    <outlet property="iconImageView" destination="ZJa-eZ-RQ8" id="FLc-wP-QLC"/>
-                                    <outlet property="replyLabel" destination="C07-eV-xxr" id="deJ-4z-FAe"/>
-                                    <outlet property="titleLabel" destination="Qgl-sh-5Wo" id="qKU-VV-VeG"/>
+                                    <outlet property="detailTitleLabel" destination="SOb-0T-Kgs" id="pok-P4-8rE"/>
+                                    <outlet property="iconImageView" destination="ZJa-eZ-RQ8" id="gNI-v0-oKE"/>
+                                    <outlet property="replyLabel" destination="C07-eV-xxr" id="Z37-BK-dv6"/>
+                                    <outlet property="titleLabel" destination="Qgl-sh-5Wo" id="Xb4-SD-F2V"/>
                                     <segue destination="i9j-SM-G3M" kind="show" id="Tan-HW-Kk3"/>
                                 </connections>
                             </tableViewCell>
@@ -284,6 +284,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cM0-kk-lvj"/>
+        <segue reference="Tan-HW-Kk3"/>
     </inferredMetricsTieBreakers>
 </document>

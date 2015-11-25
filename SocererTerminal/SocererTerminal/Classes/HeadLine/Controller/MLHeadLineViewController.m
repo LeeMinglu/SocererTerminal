@@ -7,8 +7,14 @@
 //
 
 #import "MLHeadLineViewController.h"
+#import "MLHTTPManager.h"
+#import "MLHeadLine.h"
+#import "MLHeadLineCell.h"
+#import "MBProgressHUD+MLExtension.h"
 
 @interface MLHeadLineViewController ()
+
+@property (nonatomic, strong) NSArray *headlines;
 
 @end
 
@@ -17,11 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //根据域名拼接URL请求路径
+    NSString *domainURL = [kNetEaseDomain stringByAppendingString:self.urlString];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    domainURL = [NSString stringWithFormat:@"%@/0-140.html",domainURL];
+    
+    //向服务器发送请求
+    [[MLHTTPManager manager] GET:domainURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"错误:%@",error);
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
