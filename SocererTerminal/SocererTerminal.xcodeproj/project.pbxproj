@@ -14,6 +14,8 @@
 		1A3859E61C054F79002215BC /* NSString+MLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859E51C054F79002215BC /* NSString+MLExtension.m */; };
 		1A3859E91C054FDC002215BC /* UIBarButtonItem+MLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859E81C054FDC002215BC /* UIBarButtonItem+MLExtension.m */; };
 		1A3859EC1C05502E002215BC /* UIImage+MLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859EB1C05502E002215BC /* UIImage+MLExtension.m */; };
+		1A3859F01C055A31002215BC /* Headline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3859EF1C055A31002215BC /* Headline.storyboard */; };
+		1A3859F31C055C1B002215BC /* MLHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859F21C055C1B002215BC /* MLHeadLine.m */; };
 		1AF76FB71C02C9EC00D2DB8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB61C02C9EC00D2DB8F /* main.m */; };
 		1AF76FBA1C02C9ED00D2DB8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB91C02C9ED00D2DB8F /* AppDelegate.m */; };
 		1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FBC1C02C9ED00D2DB8F /* ViewController.m */; };
@@ -58,7 +60,6 @@
 		1AF9124A1C042421003D8BB4 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AF912491C042421003D8BB4 /* topic_news.json */; };
 		1AF9124D1C04274F003D8BB4 /* MLHomeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9124C1C04274F003D8BB4 /* MLHomeLabel.m */; };
 		1AF912501C043829003D8BB4 /* MLHeadLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9124F1C043829003D8BB4 /* MLHeadLineViewController.m */; };
-		1AF912521C043847003D8BB4 /* HeadLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF912511C043847003D8BB4 /* HeadLine.storyboard */; };
 		1AF912551C043903003D8BB4 /* MLSocietyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF912541C043903003D8BB4 /* MLSocietyViewController.m */; };
 		1AF912571C043915003D8BB4 /* Society.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF912561C043915003D8BB4 /* Society.storyboard */; };
 		1AFCB2311C04BEE600D6CEBD /* MLLeftDockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCB2301C04BEE600D6CEBD /* MLLeftDockMenu.m */; };
@@ -89,6 +90,9 @@
 		1A3859E81C054FDC002215BC /* UIBarButtonItem+MLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MLExtension.m"; sourceTree = "<group>"; };
 		1A3859EA1C05502E002215BC /* UIImage+MLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MLExtension.h"; sourceTree = "<group>"; };
 		1A3859EB1C05502E002215BC /* UIImage+MLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MLExtension.m"; sourceTree = "<group>"; };
+		1A3859EF1C055A31002215BC /* Headline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Headline.storyboard; sourceTree = "<group>"; };
+		1A3859F11C055C1B002215BC /* MLHeadLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadLine.h; sourceTree = "<group>"; };
+		1A3859F21C055C1B002215BC /* MLHeadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadLine.m; sourceTree = "<group>"; };
 		1AF76FB21C02C9EC00D2DB8F /* SocererTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocererTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF76FB61C02C9EC00D2DB8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../main.m; sourceTree = "<group>"; };
 		1AF76FB81C02C9EC00D2DB8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -174,7 +178,6 @@
 		1AF9124C1C04274F003D8BB4 /* MLHomeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHomeLabel.m; sourceTree = "<group>"; };
 		1AF9124E1C043829003D8BB4 /* MLHeadLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadLineViewController.h; sourceTree = "<group>"; };
 		1AF9124F1C043829003D8BB4 /* MLHeadLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadLineViewController.m; sourceTree = "<group>"; };
-		1AF912511C043847003D8BB4 /* HeadLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeadLine.storyboard; sourceTree = "<group>"; };
 		1AF912531C043903003D8BB4 /* MLSocietyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSocietyViewController.h; sourceTree = "<group>"; };
 		1AF912541C043903003D8BB4 /* MLSocietyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSocietyViewController.m; sourceTree = "<group>"; };
 		1AF912561C043915003D8BB4 /* Society.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Society.storyboard; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 		1AF76FDB1C02CCE900D2DB8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A3859F11C055C1B002215BC /* MLHeadLine.h */,
+				1A3859F21C055C1B002215BC /* MLHeadLine.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,7 +416,7 @@
 		1AF76FDC1C02CCE900D2DB8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1AF912511C043847003D8BB4 /* HeadLine.storyboard */,
+				1A3859EF1C055A31002215BC /* Headline.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -941,10 +946,10 @@
 				1AFD3F831C03243900129296 /* Video.storyboard in Resources */,
 				1AF76FC21C02C9ED00D2DB8F /* Assets.xcassets in Resources */,
 				1AF76FC01C02C9ED00D2DB8F /* Main.storyboard in Resources */,
-				1AF912521C043847003D8BB4 /* HeadLine.storyboard in Resources */,
 				1A3859E01C054E41002215BC /* MLStatusBarHUD.bundle in Resources */,
 				1AFD3F7E1C03237200129296 /* Discover.storyboard in Resources */,
 				1AFD3F881C0324CE00129296 /* Me.storyboard in Resources */,
+				1A3859F01C055A31002215BC /* Headline.storyboard in Resources */,
 				1AF912571C043915003D8BB4 /* Society.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -965,6 +970,7 @@
 				1AF770661C02D39200D2DB8F /* SDWebImageDownloaderOperation.m in Sources */,
 				1AF912501C043829003D8BB4 /* MLHeadLineViewController.m in Sources */,
 				1AF770591C02D39200D2DB8F /* AFNetworkReachabilityManager.m in Sources */,
+				1A3859F31C055C1B002215BC /* MLHeadLine.m in Sources */,
 				1AF770881C02E96700D2DB8F /* UIView+MLExtension.m in Sources */,
 				1AF7706D1C02D39200D2DB8F /* UIImageView+HighlightedWebCache.m in Sources */,
 				1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */,
