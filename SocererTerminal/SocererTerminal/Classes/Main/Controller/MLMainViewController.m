@@ -38,13 +38,13 @@
 @implementation MLMainViewController
 
 - (NSArray *)channelList {
-    if (!_channelList) {
+    if (_channelList == nil) {
         //1. 加载json的二进制数据
         NSString *path = [[NSBundle mainBundle] pathForResource:@"topic_news.json" ofType:nil];
         NSData *data = [NSData dataWithContentsOfFile:path];
         
         //2.反序列化
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
         
         //3.从字典中获取数据据
         NSArray *dictArray = dict[dict.keyEnumerator.nextObject];
@@ -132,7 +132,7 @@
  *  默认显示的子控制器
  */
 - (void)addDefaultChildController {
-    UIViewController *firstVc = self.childViewControllers.firstObject;
+    UIViewController *firstVc = [self.childViewControllers firstObject];
     
     [self addChildViewController:firstVc];
     firstVc.view.frame = self.contentScrollView.bounds;
@@ -236,7 +236,7 @@
 }
 
 //监听label的点击
-- (void)labelClick:(UIGestureRecognizer *)recognizer {
+- (void)labelClick:(UITapGestureRecognizer *)recognizer {
     //1.获得被点击的label
     MLHomeLabel *label = (MLHomeLabel *)recognizer.view;
     
@@ -247,6 +247,90 @@
     //3.设置偏移量
     [self.contentScrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
+}
+
+/**在scrollview动画结束时调用 */
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    //获得当前需要的子控制器索引
+    NSUInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    
+    
+    UIViewController *vc = self.childViewControllers[index];
+    
+    //滚动标题栏
+    MLHomeLabel *label = self.titleScrollView.subviews[index];
+    CGFloat width = self.titleScrollView.frame.size.width;
+    CGFloat offsetX = label.center.x - width * 0.5;
+    
+    
+    
+    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - width;
+    
+    if (offsetX < 0) {
+        offsetX = 0;
+    }else if (offsetX > maxOffsetX) {
+        offsetX = maxOffsetX;
+    }
+    
+    [self.titleScrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    
+    //遍历其它的label
+//    [self.titleScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if (idx != index) {
+//            MLHomeLabel *otherLabel = self.titleScrollView.subviews[idx];
+//            otherLabel.scale = 0.0;
+//        }
+//    }];
+    
+    [self.titleScrollView.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (idx != index) {
+                        MLHomeLabel *otherLabel = self.titleScrollView.subviews[idx];
+                        otherLabel.scale = 0.0;
+                    }
+    }];
+    
+    //如果子控制器的view已经在上面,就直接返回
+    if (vc.view.superview) return;
+    
+    //添加
+    CGFloat vcW = scrollView.frame.size.width;
+    CGFloat vcH = scrollView.frame.size.height;
+    CGFloat vcY = 0;
+    CGFloat vcX = index * vcW;
+    NSLog(@"%f",vcX);
+    vc.view.frame = CGRectMake(vcX, vcY, vcW, vcH);
+    
+    [scrollView addSubview:vc.view];
+}
+
+//当scrollView停止滚动时调用这个方法
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+
+//当scrollview滚动的时候调用
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat value = ABS(self.contentScrollView.contentOffset.x / self.contentScrollView.frame.size.width);
+    
+    //左边文字的索引
+    NSUInteger leftIndex = (NSUInteger)value;
+    //右边文字的索引
+    NSUInteger rightIndex = leftIndex + 1;
+    
+    //右边文字的比例
+    CGFloat rightScale = value - leftIndex;
+    //左边文字的比例
+    CGFloat leftScale = 1 - rightScale;
+    
+    //取出label设置的大小和颜色
+    
+    MLHomeLabel *leftLabel = self.titleScrollView.subviews[leftIndex];
+    leftLabel.scale = leftScale;
+    if (rightIndex < self.titleScrollView.subviews.count) {
+        MLHomeLabel *rightLabel = self.titleScrollView.subviews[rightIndex];
+        rightLabel.scale = rightScale;
+    }
 }
 
 
