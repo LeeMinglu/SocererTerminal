@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MLHeadLine;
 
 @interface MLNewsDetailViewController : UIViewController
-
+/** 数据模型属性 */
+@property (nonatomic, strong) MLHeadLine *headline;
 @end

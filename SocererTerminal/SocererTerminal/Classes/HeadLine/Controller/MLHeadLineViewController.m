@@ -11,6 +11,7 @@
 #import "MLHeadLine.h"
 #import "MLHeadLineCell.h"
 #import "MBProgressHUD+MLExtension.h"
+#import "MLNewsDetailViewController.h"
 
 @interface MLHeadLineViewController ()
 
@@ -97,5 +98,20 @@
     }
     
     return 80; // 80 -> @"NewsCell"
+}
+
+
+
+
+#pragma mark - 在控制器跳转之前的准备工作
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //1. 获取tableView选中的行
+    NSUInteger row = self.tableView.indexPathForSelectedRow.row;
+    
+    //2. 创建目标控制器
+    MLNewsDetailViewController *newsDetail = segue.destinationViewController;
+    //3.给目标控制器传递数据
+    newsDetail.headline = self.headlines[row];
+    
 }
 @end

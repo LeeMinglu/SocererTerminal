@@ -45,6 +45,7 @@
 }
 
 
+
 - (void)setHeadline:(MLHeadLine *)headline
 {
     _headline = headline;
