@@ -92,8 +92,81 @@
     // 6. 设置导航栏左边的item
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sidebar_nav_news"] style:UIBarButtonItemStylePlain target:self action:@selector(navLeftItemClick)];
     
+
+    //7. 处理通知
+    [self setupNotes];
+    
     
 }
+
+
+#pragma mark - 处理通知
+
+- (void)setupNotes {
+    //监听通知
+    [MLNoteCenter addObserver:self selector:@selector(leftDockMenuDidSelect:) name:MLLeftDockMenuDidSelectNotification object:nil];
+}
+
+//移除通知
+- (void)dealloc {
+    [MLNoteCenter removeObserver:self];
+}
+
+//监听到通知后的处理方法
+- (void)leftDockMenuDidSelect:(NSNotification *) note {
+
+    //获取左边视图按钮被点击的下标
+    int index = [note.userInfo[MLSelectedLeftDockMenuIndexKey] intValue];
+    
+    //调用切换子控制器的方法,将下标传过去
+    [self switchChildVc:index];
+}
+
+
+/** 使用枚举列出每个不同按钮被点击后需要切换的控制器名称 (tag) 的属性值 */
+typedef enum{
+    MLLeftDockMenuTypeNews = 0, // 点击了 "新闻"
+    MLLeftDockMenuTypeSubscription = 1, // 点击了 "订阅"
+    MLLeftDockMenuTypePicture = 2, // 点击了 "图片"
+    MLLeftDockMenuTypeVideo = 3, // 点击了 "视频"
+    MLLeftDockMenuTypeReply = 4, // 点击了 "跟帖"
+    MLLeftDockMenuTypeRadio = 5  // 点击了 "电台"
+} MLLeftDockMenuType;
+
+- (void)switchChildVc:(int) index {
+#warning -当dock视图中按钮被点击之后,在这里切换创建相应的控制器,并将控制器显示在界面上
+    switch (index) {
+        case MLLeftDockMenuTypeNews:
+            MLLog(@"点击了新闻");
+            break;
+            
+        case MLLeftDockMenuTypeSubscription:
+            MLLog(@"点击了订阅");
+            break;
+            
+        case MLLeftDockMenuTypePicture:
+            MLLog(@"点击了图片");
+            break;
+            
+        case MLLeftDockMenuTypeVideo:
+            MLLog(@"点击了视频");
+            break;
+            
+        case MLLeftDockMenuTypeReply:
+            MLLog(@"点击了跟帖");
+            break;
+            
+        case MLLeftDockMenuTypeRadio:
+            MLLog(@"点击了电台");
+            
+        default:
+            break;
+    }
+    
+    
+    
+}
+
 
 
 

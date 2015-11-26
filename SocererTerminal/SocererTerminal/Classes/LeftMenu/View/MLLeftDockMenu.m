@@ -76,7 +76,9 @@
 
 /**监听按钮点击*/
 - (void)buttonClick:(UIButton *)button {
-    MLLog(@"buttonClick ---需要发送通知!");
+    
+    //找出被点击按钮的索引
+    [MLNoteCenter postNotificationName:MLLeftDockMenuDidSelectNotification object:nil userInfo:@{MLSelectedLeftDockMenuIndexKey : @(button.tag)}];
 }
 
 @end
