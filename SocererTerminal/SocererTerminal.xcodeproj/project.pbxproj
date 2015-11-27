@@ -21,6 +21,8 @@
 		1A385A021C058AFC002215BC /* MLNewsDetailImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A385A011C058AFC002215BC /* MLNewsDetailImg.m */; };
 		1A385A051C058D55002215BC /* MLNewsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A385A041C058D55002215BC /* MLNewsDetail.m */; };
 		1A385A071C0590E1002215BC /* MLNewsDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 1A385A061C0590E1002215BC /* MLNewsDetail.css */; };
+		1A507EC61C07DEA8004F7AE2 /* MLReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A507EC51C07DEA8004F7AE2 /* MLReplyViewController.m */; };
+		1A507EC81C07DECB004F7AE2 /* Reply.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A507EC71C07DECB004F7AE2 /* Reply.storyboard */; };
 		1AF76FB71C02C9EC00D2DB8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB61C02C9EC00D2DB8F /* main.m */; };
 		1AF76FBA1C02C9ED00D2DB8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB91C02C9ED00D2DB8F /* AppDelegate.m */; };
 		1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FBC1C02C9ED00D2DB8F /* ViewController.m */; };
@@ -79,6 +81,8 @@
 		1AFD3F911C0332F400129296 /* MLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3F901C0332F400129296 /* MLNavigationController.m */; };
 		1AFD3F971C03337C00129296 /* MLBottomTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3F961C03337C00129296 /* MLBottomTabBarBtn.m */; };
 		1AFD3F9A1C03359400129296 /* MLBottomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3F991C03359400129296 /* MLBottomTabBar.m */; };
+		1AFDE86D1C07253C00A31B42 /* MLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDE86C1C07253C00A31B42 /* MLPictureViewController.m */; };
+		1AFDE86F1C07255000A31B42 /* Picture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFDE86E1C07255000A31B42 /* Picture.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +111,9 @@
 		1A385A031C058D55002215BC /* MLNewsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLNewsDetail.h; sourceTree = "<group>"; };
 		1A385A041C058D55002215BC /* MLNewsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLNewsDetail.m; sourceTree = "<group>"; };
 		1A385A061C0590E1002215BC /* MLNewsDetail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = MLNewsDetail.css; sourceTree = "<group>"; };
+		1A507EC41C07DEA8004F7AE2 /* MLReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLReplyViewController.h; sourceTree = "<group>"; };
+		1A507EC51C07DEA8004F7AE2 /* MLReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLReplyViewController.m; sourceTree = "<group>"; };
+		1A507EC71C07DECB004F7AE2 /* Reply.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reply.storyboard; sourceTree = "<group>"; };
 		1AF76FB21C02C9EC00D2DB8F /* SocererTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocererTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF76FB61C02C9EC00D2DB8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../main.m; sourceTree = "<group>"; };
 		1AF76FB81C02C9EC00D2DB8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -215,6 +222,9 @@
 		1AFD3F961C03337C00129296 /* MLBottomTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBottomTabBarBtn.m; sourceTree = "<group>"; };
 		1AFD3F981C03359400129296 /* MLBottomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBottomTabBar.h; sourceTree = "<group>"; };
 		1AFD3F991C03359400129296 /* MLBottomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBottomTabBar.m; sourceTree = "<group>"; };
+		1AFDE86B1C07253C00A31B42 /* MLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPictureViewController.h; sourceTree = "<group>"; };
+		1AFDE86C1C07253C00A31B42 /* MLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPictureViewController.m; sourceTree = "<group>"; };
+		1AFDE86E1C07255000A31B42 /* Picture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Picture.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +708,8 @@
 		1AF76FF41C02CCE900D2DB8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1AFDE86B1C07253C00A31B42 /* MLPictureViewController.h */,
+				1AFDE86C1C07253C00A31B42 /* MLPictureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -705,6 +717,7 @@
 		1AF76FF51C02CCE900D2DB8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AFDE86E1C07255000A31B42 /* Picture.storyboard */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -763,6 +776,8 @@
 		1AF76FFC1C02CCE900D2DB8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A507EC41C07DEA8004F7AE2 /* MLReplyViewController.h */,
+				1A507EC51C07DEA8004F7AE2 /* MLReplyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -777,6 +792,7 @@
 		1AF76FFE1C02CCE900D2DB8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A507EC71C07DECB004F7AE2 /* Reply.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -984,11 +1000,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A507EC81C07DECB004F7AE2 /* Reply.storyboard in Resources */,
 				1AF770931C03186700D2DB8F /* Main.storyboard in Resources */,
 				1AF76FC51C02C9ED00D2DB8F /* LaunchScreen.storyboard in Resources */,
 				1AFD3F791C0322DF00129296 /* Reading.storyboard in Resources */,
 				1A385A071C0590E1002215BC /* MLNewsDetail.css in Resources */,
 				1AF7700B1C02CE6500D2DB8F /* Ad.storyboard in Resources */,
+				1AFDE86F1C07255000A31B42 /* Picture.storyboard in Resources */,
 				1AF770171C02D37200D2DB8F /* MBProgressHUD.bundle in Resources */,
 				1AF9124A1C042421003D8BB4 /* topic_news.json in Resources */,
 				1AFD3F831C03243900129296 /* Video.storyboard in Resources */,
@@ -1023,6 +1041,7 @@
 				1A3859F31C055C1B002215BC /* MLHeadLine.m in Sources */,
 				1AF770881C02E96700D2DB8F /* UIView+MLExtension.m in Sources */,
 				1AF7706D1C02D39200D2DB8F /* UIImageView+HighlightedWebCache.m in Sources */,
+				1AFDE86D1C07253C00A31B42 /* MLPictureViewController.m in Sources */,
 				1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */,
 				1AF912481C0423D6003D8BB4 /* MLChannel.m in Sources */,
 				1AF912551C043903003D8BB4 /* MLSocietyViewController.m in Sources */,
@@ -1053,6 +1072,7 @@
 				1AF76FBA1C02C9ED00D2DB8F /* AppDelegate.m in Sources */,
 				1AFCB2311C04BEE600D6CEBD /* MLLeftDockMenu.m in Sources */,
 				1A385A021C058AFC002215BC /* MLNewsDetailImg.m in Sources */,
+				1A507EC61C07DEA8004F7AE2 /* MLReplyViewController.m in Sources */,
 				1AF7705D1C02D39200D2DB8F /* AFURLResponseSerialization.m in Sources */,
 				1AFD3F861C0324AC00129296 /* MLMeViewController.m in Sources */,
 				1AF7706B1C02D39200D2DB8F /* UIImage+MultiFormat.m in Sources */,

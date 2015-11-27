@@ -12,6 +12,7 @@
 #import "MLSocietyViewController.h"
 #import "MLHomeLabel.h"
 #import "MLLeftDockMenu.h"
+#import "MLNavigationController.h"
 
 @interface MLMainViewController ()<UIScrollViewDelegate>
 
@@ -134,7 +135,7 @@ typedef enum{
 } MLLeftDockMenuType;
 
 - (void)switchChildVc:(int) index {
-#warning -当dock视图中按钮被点击之后,在这里切换创建相应的控制器,并将控制器显示在界面上
+//#warning - 当dock视图中按钮被点击之后,在这里切换创建相应的控制器,并将控制器显示在界面上
     switch (index) {
         case MLLeftDockMenuTypeNews:
             MLLog(@"点击了新闻");
@@ -144,10 +145,21 @@ typedef enum{
             MLLog(@"点击了订阅");
             break;
             
-        case MLLeftDockMenuTypePicture:
+        case MLLeftDockMenuTypePicture:{
             MLLog(@"点击了图片");
-            break;
+            UIStoryboard *pictureStoryBoard = [UIStoryboard storyboardWithName:@"Picture" bundle:nil];
             
+            MLNavigationController *pictureVc = [pictureStoryBoard instantiateInitialViewController];
+            
+            
+//            [window addSubview:pictureVc.view];
+            
+            //3.以modal的形式弹出
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self presentViewController:pictureVc animated:YES completion:nil];
+            });
+            break;
+    }
         case MLLeftDockMenuTypeVideo:
             MLLog(@"点击了视频");
             break;
