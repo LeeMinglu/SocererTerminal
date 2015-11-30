@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    NSOperationQueue
+    
     //1.设置背景图片
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
@@ -60,5 +62,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

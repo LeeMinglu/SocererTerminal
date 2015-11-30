@@ -13,6 +13,7 @@
 #import "MLHomeLabel.h"
 #import "MLLeftDockMenu.h"
 #import "MLNavigationController.h"
+#import "MLReplyViewController.h"
 
 @interface MLMainViewController ()<UIScrollViewDelegate>
 
@@ -164,10 +165,19 @@ typedef enum{
             MLLog(@"点击了视频");
             break;
             
-        case MLLeftDockMenuTypeReply:
+        case MLLeftDockMenuTypeReply:{
             MLLog(@"点击了跟帖");
-            break;
             
+            //加载UIStoryBoard
+            UIStoryboard *replyStoryBoard = [UIStoryboard storyboardWithName:@"Reply" bundle:nil];
+            
+            MLNavigationController *replyVc = [replyStoryBoard instantiateInitialViewController];
+            
+            [self presentViewController:replyVc animated:YES completion:nil];
+            
+            
+            break;
+        }
         case MLLeftDockMenuTypeRadio:
             MLLog(@"点击了电台");
             

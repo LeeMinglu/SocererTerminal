@@ -10,9 +10,14 @@
 
 @interface MLReplyViewController ()
 
+
 @end
 
 @implementation MLReplyViewController
+- (IBAction)backItemBtn:(UIBarButtonItem *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
