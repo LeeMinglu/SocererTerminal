@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>凤凰中文</string>
+		<key>url</key>
+		<string>http://zv.3gv.ifeng.com/zhongwen.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>凤凰资讯</string>
+		<key>url</key>
+		<string>http://zv.3gv.ifeng.com/zixun.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CNN新闻</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/cnnnews_sp.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CNN国际</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/cnnint_sp.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>东森新闻</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/acti_sp.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>台视HD</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/ttv.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>华视HD</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/ctshd/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>民视</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/ftvtravel_sp.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>中视</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/ctv.sdp/chunklist.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>非凡新闻</string>
+		<key>url</key>
+		<string>http://210.200.79.26:1935/live/ustvn_sp.sdp/chunklist.m3u8</string>
+	</dict>
+</array>
+</plist>

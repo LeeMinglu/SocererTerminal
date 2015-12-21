@@ -31,7 +31,7 @@
     
     //向服务器发送请求
     [[MLHTTPManager manager] GET:domainURL parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        NSLog(@"%@", responseObject);
+//        NSLog(@"%@", responseObject);
         
         //解析数据
 //        [responseObject writeToFile:@"/Users/luoriver/Desktop/news.plist" atomically:YES];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A017B8E1C23A804005D53FC /* MLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A017B8D1C23A804005D53FC /* MLCameraViewController.m */; };
 		1A3859DA1C05499E002215BC /* MLHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859D91C05499E002215BC /* MLHTTPManager.m */; };
 		1A3859DE1C054D0B002215BC /* MLStatusBarHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3859DD1C054D0B002215BC /* MLStatusBarHUD.m */; };
 		1A3859E01C054E41002215BC /* MLStatusBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A3859DF1C054E41002215BC /* MLStatusBarHUD.bundle */; };
@@ -23,6 +24,12 @@
 		1A385A071C0590E1002215BC /* MLNewsDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 1A385A061C0590E1002215BC /* MLNewsDetail.css */; };
 		1A507EC61C07DEA8004F7AE2 /* MLReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A507EC51C07DEA8004F7AE2 /* MLReplyViewController.m */; };
 		1A507EC81C07DECB004F7AE2 /* Reply.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A507EC71C07DECB004F7AE2 /* Reply.storyboard */; };
+		1A61EC6C1C27E7E90094E559 /* MLTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61EC621C27E7E90094E559 /* MLTVController.m */; };
+		1A61EC6D1C27E7E90094E559 /* luo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A61EC641C27E7E90094E559 /* luo.plist */; };
+		1A61EC6E1C27E7E90094E559 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61EC661C27E7E90094E559 /* TV.m */; };
+		1A61EC6F1C27E7E90094E559 /* TV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A61EC681C27E7E90094E559 /* TV.storyboard */; };
+		1A61EC701C27E7E90094E559 /* TVViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61EC6A1C27E7E90094E559 /* TVViewCell.m */; };
+		1A61EC711C27E7E90094E559 /* TVViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A61EC6B1C27E7E90094E559 /* TVViewCell.xib */; };
 		1AF76FB71C02C9EC00D2DB8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB61C02C9EC00D2DB8F /* main.m */; };
 		1AF76FBA1C02C9ED00D2DB8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FB91C02C9ED00D2DB8F /* AppDelegate.m */; };
 		1AF76FBD1C02C9ED00D2DB8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF76FBC1C02C9ED00D2DB8F /* ViewController.m */; };
@@ -86,6 +93,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A017B8C1C23A804005D53FC /* MLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCameraViewController.h; sourceTree = "<group>"; };
+		1A017B8D1C23A804005D53FC /* MLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCameraViewController.m; sourceTree = "<group>"; };
 		1A3859D81C05499E002215BC /* MLHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHTTPManager.h; sourceTree = "<group>"; };
 		1A3859D91C05499E002215BC /* MLHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHTTPManager.m; sourceTree = "<group>"; };
 		1A3859DC1C054D0B002215BC /* MLStatusBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLStatusBarHUD.h; sourceTree = "<group>"; };
@@ -114,6 +123,15 @@
 		1A507EC41C07DEA8004F7AE2 /* MLReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLReplyViewController.h; sourceTree = "<group>"; };
 		1A507EC51C07DEA8004F7AE2 /* MLReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLReplyViewController.m; sourceTree = "<group>"; };
 		1A507EC71C07DECB004F7AE2 /* Reply.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reply.storyboard; sourceTree = "<group>"; };
+		1A61EC611C27E7E90094E559 /* MLTVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTVController.h; sourceTree = "<group>"; };
+		1A61EC621C27E7E90094E559 /* MLTVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTVController.m; sourceTree = "<group>"; };
+		1A61EC641C27E7E90094E559 /* luo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = luo.plist; sourceTree = "<group>"; };
+		1A61EC651C27E7E90094E559 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
+		1A61EC661C27E7E90094E559 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
+		1A61EC681C27E7E90094E559 /* TV.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TV.storyboard; sourceTree = "<group>"; };
+		1A61EC691C27E7E90094E559 /* TVViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVViewCell.h; sourceTree = "<group>"; };
+		1A61EC6A1C27E7E90094E559 /* TVViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVViewCell.m; sourceTree = "<group>"; };
+		1A61EC6B1C27E7E90094E559 /* TVViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TVViewCell.xib; sourceTree = "<group>"; };
 		1AF76FB21C02C9EC00D2DB8F /* SocererTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocererTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF76FB61C02C9EC00D2DB8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../../main.m; sourceTree = "<group>"; };
 		1AF76FB81C02C9EC00D2DB8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -238,6 +256,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A017B881C23A77C005D53FC /* Camera--leftDockMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1A017B891C23A77C005D53FC /* Controller */,
+				1A017B8A1C23A77C005D53FC /* Model */,
+				1A017B8B1C23A77C005D53FC /* View */,
+			);
+			name = "Camera--leftDockMenu";
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		1A017B891C23A77C005D53FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A017B8C1C23A804005D53FC /* MLCameraViewController.h */,
+				1A017B8D1C23A804005D53FC /* MLCameraViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A017B8A1C23A77C005D53FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A017B8B1C23A77C005D53FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1A3859DB1C054CD5002215BC /* MLStatusBarHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +324,47 @@
 		1A3859F91C057B7A002215BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A61EC5F1C27E7E90094E559 /* TV--leftDockMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1A61EC601C27E7E90094E559 /* Controller */,
+				1A61EC631C27E7E90094E559 /* Model */,
+				1A61EC671C27E7E90094E559 /* View */,
+			);
+			name = "TV--leftDockMenu";
+			path = TV;
+			sourceTree = "<group>";
+		};
+		1A61EC601C27E7E90094E559 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A61EC611C27E7E90094E559 /* MLTVController.h */,
+				1A61EC621C27E7E90094E559 /* MLTVController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A61EC631C27E7E90094E559 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A61EC641C27E7E90094E559 /* luo.plist */,
+				1A61EC651C27E7E90094E559 /* TV.h */,
+				1A61EC661C27E7E90094E559 /* TV.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A61EC671C27E7E90094E559 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A61EC681C27E7E90094E559 /* TV.storyboard */,
+				1A61EC691C27E7E90094E559 /* TVViewCell.h */,
+				1A61EC6A1C27E7E90094E559 /* TVViewCell.m */,
+				1A61EC6B1C27E7E90094E559 /* TVViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,15 +415,17 @@
 				1AF76FDD1C02CCE900D2DB8F /* LeftMenu-左侧菜单视图 */,
 				1AF76FE51C02CCE900D2DB8F /* MainTabBar-自定义TabBar控制器 */,
 				1AF76FE11C02CCE900D2DB8F /* Main-tabBar子控制器01 */,
-				1AF76FF71C02CCE900D2DB8F /* Reading */,
-				1AF76FD51C02CCE900D2DB8F /* Discover */,
-				1AF770031C02CCE900D2DB8F /* Video */,
-				1AF76FE91C02CCE900D2DB8F /* Me */,
+				1AF76FF71C02CCE900D2DB8F /* Reading-tabBar */,
+				1AF76FD51C02CCE900D2DB8F /* Discover-tabBar */,
+				1AF770031C02CCE900D2DB8F /* Video-tabBar */,
+				1AF76FE91C02CCE900D2DB8F /* Me-tabBar */,
 				1AF76FD91C02CCE900D2DB8F /* HeadLine-main(01) */,
 				1AF76FFF1C02CCE900D2DB8F /* Society-main(02) */,
 				1AF76FED1C02CCE900D2DB8F /* NewsDetail */,
-				1AF76FF31C02CCE900D2DB8F /* Picture */,
-				1AF76FFB1C02CCE900D2DB8F /* Reply */,
+				1AF76FF31C02CCE900D2DB8F /* Picture--leftDockMenu */,
+				1A017B881C23A77C005D53FC /* Camera--leftDockMenu */,
+				1AF76FFB1C02CCE900D2DB8F /* Reply--leftDockMenu */,
+				1A61EC5F1C27E7E90094E559 /* TV--leftDockMenu */,
 				1AF76FEE1C02CCE900D2DB8F /* Other */,
 			);
 			path = Classes;
@@ -402,13 +497,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF76FD51C02CCE900D2DB8F /* Discover */ = {
+		1AF76FD51C02CCE900D2DB8F /* Discover-tabBar */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FD61C02CCE900D2DB8F /* Controller */,
 				1AF76FD71C02CCE900D2DB8F /* Model */,
 				1AF76FD81C02CCE900D2DB8F /* View */,
 			);
+			name = "Discover-tabBar";
 			path = Discover;
 			sourceTree = "<group>";
 		};
@@ -589,13 +685,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF76FE91C02CCE900D2DB8F /* Me */ = {
+		1AF76FE91C02CCE900D2DB8F /* Me-tabBar */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FEA1C02CCE900D2DB8F /* Controller */,
 				1AF76FEB1C02CCE900D2DB8F /* Model */,
 				1AF76FEC1C02CCE900D2DB8F /* View */,
 			);
+			name = "Me-tabBar";
 			path = Me;
 			sourceTree = "<group>";
 		};
@@ -695,13 +792,14 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		1AF76FF31C02CCE900D2DB8F /* Picture */ = {
+		1AF76FF31C02CCE900D2DB8F /* Picture--leftDockMenu */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FF41C02CCE900D2DB8F /* Controller */,
 				1AF76FF51C02CCE900D2DB8F /* Model */,
 				1AF76FF61C02CCE900D2DB8F /* View */,
 			);
+			name = "Picture--leftDockMenu";
 			path = Picture;
 			sourceTree = "<group>";
 		};
@@ -729,13 +827,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF76FF71C02CCE900D2DB8F /* Reading */ = {
+		1AF76FF71C02CCE900D2DB8F /* Reading-tabBar */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FF81C02CCE900D2DB8F /* Controller */,
 				1AF76FF91C02CCE900D2DB8F /* Model */,
 				1AF76FFA1C02CCE900D2DB8F /* View */,
 			);
+			name = "Reading-tabBar";
 			path = Reading;
 			sourceTree = "<group>";
 		};
@@ -763,13 +862,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF76FFB1C02CCE900D2DB8F /* Reply */ = {
+		1AF76FFB1C02CCE900D2DB8F /* Reply--leftDockMenu */ = {
 			isa = PBXGroup;
 			children = (
 				1AF76FFC1C02CCE900D2DB8F /* Controller */,
 				1AF76FFD1C02CCE900D2DB8F /* Model */,
 				1AF76FFE1C02CCE900D2DB8F /* View */,
 			);
+			name = "Reply--leftDockMenu";
 			path = Reply;
 			sourceTree = "<group>";
 		};
@@ -832,13 +932,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AF770031C02CCE900D2DB8F /* Video */ = {
+		1AF770031C02CCE900D2DB8F /* Video-tabBar */ = {
 			isa = PBXGroup;
 			children = (
 				1AF770041C02CCE900D2DB8F /* Controller */,
 				1AF770051C02CCE900D2DB8F /* Model */,
 				1AF770061C02CCE900D2DB8F /* View */,
 			);
+			name = "Video-tabBar";
 			path = Video;
 			sourceTree = "<group>";
 		};
@@ -973,7 +1074,6 @@
 				TargetAttributes = {
 					1AF76FB11C02C9EC00D2DB8F = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = C8J2NBUA64;
 					};
 				};
 			};
@@ -1008,11 +1108,14 @@
 				1AF7700B1C02CE6500D2DB8F /* Ad.storyboard in Resources */,
 				1AFDE86F1C07255000A31B42 /* Picture.storyboard in Resources */,
 				1AF770171C02D37200D2DB8F /* MBProgressHUD.bundle in Resources */,
+				1A61EC711C27E7E90094E559 /* TVViewCell.xib in Resources */,
+				1A61EC6F1C27E7E90094E559 /* TV.storyboard in Resources */,
 				1AF9124A1C042421003D8BB4 /* topic_news.json in Resources */,
 				1AFD3F831C03243900129296 /* Video.storyboard in Resources */,
 				1AF76FC21C02C9ED00D2DB8F /* Assets.xcassets in Resources */,
 				1AF76FC01C02C9ED00D2DB8F /* Main.storyboard in Resources */,
 				1A3859E01C054E41002215BC /* MLStatusBarHUD.bundle in Resources */,
+				1A61EC6D1C27E7E90094E559 /* luo.plist in Resources */,
 				1AFD3F7E1C03237200129296 /* Discover.storyboard in Resources */,
 				1AFD3F881C0324CE00129296 /* Me.storyboard in Resources */,
 				1A3859F01C055A31002215BC /* HeadLine.storyboard in Resources */,
@@ -1047,6 +1150,8 @@
 				1AF912551C043903003D8BB4 /* MLSocietyViewController.m in Sources */,
 				1AF770641C02D39200D2DB8F /* SDWebImageDecoder.m in Sources */,
 				1A3859DA1C05499E002215BC /* MLHTTPManager.m in Sources */,
+				1A017B8E1C23A804005D53FC /* MLCameraViewController.m in Sources */,
+				1A61EC701C27E7E90094E559 /* TVViewCell.m in Sources */,
 				1AF7708E1C0317A700D2DB8F /* MLMainViewController.m in Sources */,
 				1A3859E91C054FDC002215BC /* UIBarButtonItem+MLExtension.m in Sources */,
 				1A3859EC1C05502E002215BC /* UIImage+MLExtension.m in Sources */,
@@ -1057,6 +1162,7 @@
 				1AF770621C02D39200D2DB8F /* SDImageCache.m in Sources */,
 				1AF770581C02D39200D2DB8F /* AFHTTPSessionManager.m in Sources */,
 				1AF7705F1C02D39200D2DB8F /* MBProgressHUD.m in Sources */,
+				1A61EC6E1C27E7E90094E559 /* TV.m in Sources */,
 				1AF770671C02D39200D2DB8F /* SDWebImageManager.m in Sources */,
 				1AF7706F1C02D39200D2DB8F /* UIView+WebCacheOperation.m in Sources */,
 				1AFD3F771C0322C000129296 /* MLReadingViewController.m in Sources */,
@@ -1064,6 +1170,7 @@
 				1A385A051C058D55002215BC /* MLNewsDetail.m in Sources */,
 				1AF7705E1C02D39200D2DB8F /* AFURLSessionManager.m in Sources */,
 				1AF770651C02D39200D2DB8F /* SDWebImageDownloader.m in Sources */,
+				1A61EC6C1C27E7E90094E559 /* MLTVController.m in Sources */,
 				1AFD3F811C03242100129296 /* MLVideoViewController.m in Sources */,
 				1AF7706A1C02D39200D2DB8F /* UIImage+GIF.m in Sources */,
 				1AF770571C02D39200D2DB8F /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1196,11 +1303,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SocererTerminal/Classes/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = SocererTerminal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.SocererTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.SocererTerminals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1210,11 +1318,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SocererTerminal/Classes/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = SocererTerminal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.SocererTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.SocererTerminals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

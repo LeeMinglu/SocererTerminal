@@ -14,6 +14,8 @@
 #import "MLLeftDockMenu.h"
 #import "MLNavigationController.h"
 #import "MLReplyViewController.h"
+#import "MLCameraViewController.h"
+#import "MLTVController.h"
 
 @interface MLMainViewController ()<UIScrollViewDelegate>
 
@@ -94,12 +96,54 @@
     // 6. 设置导航栏左边的item
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sidebar_nav_news"] style:UIBarButtonItemStylePlain target:self action:@selector(navLeftItemClick)];
     
+    //7.添加滑动手势，可切换至leftDockMenu
+//    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
+//    [self.contentScrollView addGestureRecognizer:panGesture];
+    
+    //添加轻扫手势
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
+    //设置轻扫的方向
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight; //默认向右
+    [self.contentScrollView addGestureRecognizer:swipeGesture];
+    
+    //添加轻扫手势
+    UISwipeGestureRecognizer *swipeGestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
+    //设置轻扫的方向
+    swipeGestureLeft.direction = UISwipeGestureRecognizerDirectionLeft; //默认向右
+    [self.contentScrollView addGestureRecognizer:swipeGestureLeft];
+    
+    
 
-    //7. 处理通知
+    //8. 处理通知
     [self setupNotes];
     
     
 }
+
+
+#pragma mark 左右滑动手势
+-(void) swipeGesture:(id)sender
+ {
+////    UIPanGestureRecognizer *panGesture = sender;
+//     if (self.contentScrollView.frame.origin.x < 0) return;
+//     CGPoint movePoint = CGPointMake(-200, 0);
+//     [self setupLeftDockMenu];
+////     [self.contentScrollView setContentOffset:CGPointMake(-200, 0) animated:YES];
+//     [self.contentScrollView setContentOffset:movePoint animated:YES];
+//     NSLog(@"goggogogo");
+     
+     UISwipeGestureRecognizer *swipe = sender;
+     if (swipe.direction == UISwipeGestureRecognizerDirectionLeft)
+     {
+       //向左轻扫做的事情
+
+     }
+     if (swipe.direction == UISwipeGestureRecognizerDirectionRight)
+     {
+         //向右轻扫做的事情
+     }
+    
+ }
 
 
 #pragma mark - 处理通知
@@ -156,13 +200,17 @@ typedef enum{
 //            [window addSubview:pictureVc.view];
             
             //3.以modal的形式弹出
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self presentViewController:pictureVc animated:YES completion:nil];
-            });
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [self presentViewController:pictureVc animated:YES completion:nil];
+//            });
+            
+            [self presentViewController:pictureVc animated:YES completion:nil];
             break;
     }
         case MLLeftDockMenuTypeVideo:
             MLLog(@"点击了视频");
+            [self videoOperation];
+            
             break;
             
         case MLLeftDockMenuTypeReply:{
@@ -178,8 +226,17 @@ typedef enum{
             
             break;
         }
-        case MLLeftDockMenuTypeRadio:
-            MLLog(@"点击了电台");
+        case MLLeftDockMenuTypeRadio: {
+            MLLog(@"点击了电视");
+            
+            UIStoryboard *tvStoryBoard = [UIStoryboard storyboardWithName:@"TV" bundle:nil];
+            
+            MLNavigationController *tvVc = [tvStoryBoard instantiateInitialViewController];
+            
+            [self presentViewController:tvVc animated:YES completion:nil];
+            
+            break;
+        }
             
         default:
             break;
@@ -189,8 +246,38 @@ typedef enum{
     
 }
 
+/**点击视频按钮的操作*/
+- (void)videoOperation {
+    
+    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    
+    
+    
+    MLCameraViewController *cameraVC = [[MLCameraViewController alloc] init];
+    
+   MLNavigationController *videoNavVC = [[MLNavigationController alloc] initWithRootViewController:cameraVC];
+    
+    [self presentViewController:videoNavVC animated:YES completion:nil];
+    
+    videoNavVC.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:nil action:nil];
+    
+    videoNavVC.navigationController.navigationBar.translucent = NO;
+    videoNavVC.navigationController.navigationBar.alpha = 1;
+    
+    
+    [videoNavVC.navigationBar setBackgroundImage:[UIImage imageNamed:@"audionews_play_bg_afternoon"] forBarMetrics:UIBarMetricsDefault];
+    
+//    [videoNavVC.navigationBar setBackgroundImage:[UIImage imageNamed:@"audionews_play_bg_afternoon"] forBarMetrics:UIBarMetricsDefault];
+    
 
+    videoNavVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sidebar_nav_news"] style:UIBarButtonItemStylePlain target:self action:@selector(cameraNavLeftItemClick)];
 
+}
+
+- (void)cameraNavLeftItemClick {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 /**
@@ -438,6 +525,9 @@ typedef enum{
         rightLabel.scale = rightScale;
     }
 }
+
+
+
 
 
 @end

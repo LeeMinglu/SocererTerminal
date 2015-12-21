@@ -56,7 +56,7 @@
         NSDictionary *dict = responseObject[self.headline.docid];
         // 使用模型属性存储数据
         self.detail = [MLNewsDetail newsDetailWithDict:dict];
-        NSLog(@"%@",self.detail);
+//        NSLog(@"%@",self.detail);
         
         // 展示详情内容
         [self showNewsDetail];

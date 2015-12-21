@@ -23,7 +23,8 @@
         [self setupButtonWithIcon:@"sidebar_nav_photo" title:@"图片"];
         [self setupButtonWithIcon:@"sidebar_nav_video" title:@"视频"];
         [self setupButtonWithIcon:@"sidebar_nav_comment" title:@"跟帖"];
-        [self setupButtonWithIcon:@"sidebar_nav_radio" title:@"电台"];
+        [self setupButtonWithIcon:@"sidebar_nav_radio" title:@"电视"];
+        
     }
     return self;
 }
